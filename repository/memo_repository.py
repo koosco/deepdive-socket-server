@@ -10,8 +10,8 @@ class MemoRepository:
     def __init__(self, db: Session):
         self.db = db
 
-    def save(self, title: str, content: str) -> Memo:
-        memo = Memo(title=title, content=content)
+    def save(self, title: str, content: str, audio_path: str) -> Memo:
+        memo = Memo(title=title, content=content, voice_file_url=audio_path)
         self.db.add(memo)
         self.db.commit()
         self.db.refresh(memo)

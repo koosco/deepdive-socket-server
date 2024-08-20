@@ -18,4 +18,4 @@ class MemoService:
         content = self.ai_service.translate(audio_file)
         await self.audio_repository.save(path, audio_data)
 
-        self.memo_repository.save(data['title'], content)
+        self.memo_repository.save(data['title'], content, path)
