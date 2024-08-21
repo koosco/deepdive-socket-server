@@ -1,2 +1,4 @@
 config/*env.py
 resources/*
+*__pycache__
+*/__pycache__

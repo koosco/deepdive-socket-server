@@ -19,3 +19,4 @@ class MemoService:
         await self.audio_repository.save(path, audio_data)
 
         self.memo_repository.save(data['title'], content, path)
+        return content
